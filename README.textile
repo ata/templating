@@ -1,7 +1,8 @@
 h1. SAMPLE CODE:
 
 h2. Layout
-<pre>
+<code>
+
 <html>
 <head>
     <title><?php echo $title?></title>
@@ -20,17 +21,19 @@ h2. Layout
 </div>
 </body>
 </html>
-</pre>
+</code>
 
 h2. Template content
-<pre>
+
+<code>
 //file: content.phtml
 Name : <?php echo $name?><br/>
 Email : <?php echo $email?>
-</pre>
+</code>
 
 h2. Logic
-<pre>
+
+<code>
 // file: index.php
 require '../lib/Template.php';
 
@@ -44,11 +47,11 @@ $layout->content = $tpl;
 
 echo $layout;
 
-</pre>
+</code>
 
 h2. And... HTML Result on your browser
 
-<pre>
+<code>
 <html>
 <head>
     <title>Something title</title>
@@ -68,9 +71,7 @@ h2. And... HTML Result on your browser
 </div>
 </body>
 </html>
-
-
-</pre>
+</code>
 
 
 
