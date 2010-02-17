@@ -1,8 +1,8 @@
-h1. SAMPLE CODE:
+=====SAMPLE CODE:=======
 
-h2. Layout
-<code>
+---Layout---
 
+[code]
 <html>
 <head>
     <title><?php echo $title?></title>
@@ -21,19 +21,19 @@ h2. Layout
 </div>
 </body>
 </html>
-</code>
+[/code]
 
-h2. Template content
+---Template content---
 
-<code>
+[code]
 //file: content.phtml
 Name : <?php echo $name?><br/>
 Email : <?php echo $email?>
-</code>
+[/code]
 
-h2. Logic
+---Logic---
 
-<code>
+[code]
 // file: index.php
 require '../lib/Template.php';
 
@@ -47,11 +47,11 @@ $layout->content = $tpl;
 
 echo $layout;
 
-</code>
+[/code]
 
-h2. And... HTML Result on your browser
+--- And... HTML Result on your browser ---
 
-<code>
+[code]
 <html>
 <head>
     <title>Something title</title>
@@ -71,7 +71,7 @@ h2. And... HTML Result on your browser
 </div>
 </body>
 </html>
-</code>
+[/code]
 
 
 
