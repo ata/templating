@@ -1,0 +1,76 @@
+h1. SAMPLE CODE:
+
+h2. Layout
+<pre>
+<html>
+<head>
+    <title><?php echo $title?></title>
+</head>
+<body>
+<div id="container">
+    <div id="header">
+        <h1><?php echo $title ?></h1>
+    </div>
+    <div id="content">
+        <?php echo $content ?>
+    </div>
+    <div id="footer">
+        &copy;Something
+    </div>
+</div>
+</body>
+</html>
+</pre>
+
+h2. Template content
+<pre>
+//file: content.phtml
+Name : <?php echo $name?><br/>
+Email : <?php echo $email?>
+</pre>
+
+h2. Logic
+<pre>
+// file: index.php
+require '../lib/Template.php';
+
+$tpl = new Template('content.phtml');
+$tpl->name = 'Some One';
+$tpl->email = 'some@gmail.com';
+
+$layout = new Template('layout.phtml');
+$layout->title = 'Something title';
+$layout->content = $tpl;
+
+echo $layout;
+
+</pre>
+
+h2. And... HTML Result on your browser
+
+<pre>
+<html>
+<head>
+    <title>Something title</title>
+</head>
+<body>
+<div id="container">
+    <div id="header">
+        <h1>Something title</h1>
+    </div>
+    <div id="content">
+        Name : Some One<br/>
+        Email : some@gmail.com    
+    </div>
+    <div id="footer">
+        &copy;Something
+    </div>
+</div>
+</body>
+</html>
+
+
+</pre>
+
+
+
