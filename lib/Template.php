@@ -1,6 +1,7 @@
 <?php
 
-class Template{
+class Template
+{
     protected $path;
     
     public function __construct($path)
